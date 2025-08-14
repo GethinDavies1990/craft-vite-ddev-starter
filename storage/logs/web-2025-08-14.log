@@ -363,3 +363,490 @@ $_SERVER = [
     'LICENSE_KEY' => ''
     'CRAFT_SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
 ] {"environment":"dev"} 
+2025-08-14 14:16:19 [web.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2138376} 
+2025-08-14 14:16:19 [web.ERROR] [craft\base\ApplicationTrait::getIsInstalled] There was a problem fetching the info row: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist
+The SQL being executed was: SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1 {"memory":2488200} 
+2025-08-14 14:16:19 [web.ERROR] [yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist in /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Command.php(431): yii\db\Command->queryInternal()
+#3 /var/www/html/vendor/yiisoft/yii2/db/Query.php(287): yii\db\Command->queryOne()
+#4 /var/www/html/vendor/craftcms/cms/src/db/Query.php(320): yii\db\Query->one()
+#5 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(843): craft\db\Query->one()
+#6 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(443): craft\web\Application->getInfo()
+#7 /var/www/html/vendor/craftcms/cms/src/helpers/App.php(1124): craft\web\Application->getIsInstalled()
+#8 /var/www/html/vendor/craftcms/cms/src/config/app.php(241): craft\helpers\App::projectConfigConfig()
+#9 [internal function]: {closure}()
+#10 /var/www/html/vendor/yiisoft/yii2/di/Container.php(633): call_user_func_array()
+#11 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke()
+#12 /var/www/html/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject()
+#13 /var/www/html/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get()
+#14 /var/www/html/vendor/craftcms/cms/src/web/Application.php(379): yii\base\Module->get()
+#15 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1363): craft\web\Application->get()
+#16 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1581): craft\web\Application->getProjectConfig()
+#17 /var/www/html/vendor/craftcms/cms/src/web/Application.php(100): craft\web\Application->_preInit()
+#18 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#19 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#20 [internal function]: yii\base\Application->__construct()
+#21 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#22 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#23 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#24 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#25 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#26 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#27 /var/www/html/web/index.php(11): require('...')
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist
+The SQL being executed was: SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1 in /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException()
+#1 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Command.php(431): yii\db\Command->queryInternal()
+#3 /var/www/html/vendor/yiisoft/yii2/db/Query.php(287): yii\db\Command->queryOne()
+#4 /var/www/html/vendor/craftcms/cms/src/db/Query.php(320): yii\db\Query->one()
+#5 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(843): craft\db\Query->one()
+#6 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(443): craft\web\Application->getInfo()
+#7 /var/www/html/vendor/craftcms/cms/src/helpers/App.php(1124): craft\web\Application->getIsInstalled()
+#8 /var/www/html/vendor/craftcms/cms/src/config/app.php(241): craft\helpers\App::projectConfigConfig()
+#9 [internal function]: {closure}()
+#10 /var/www/html/vendor/yiisoft/yii2/di/Container.php(633): call_user_func_array()
+#11 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke()
+#12 /var/www/html/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject()
+#13 /var/www/html/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get()
+#14 /var/www/html/vendor/craftcms/cms/src/web/Application.php(379): yii\base\Module->get()
+#15 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1363): craft\web\Application->get()
+#16 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1581): craft\web\Application->getProjectConfig()
+#17 /var/www/html/vendor/craftcms/cms/src/web/Application.php(100): craft\web\Application->_preInit()
+#18 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#19 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#20 [internal function]: yii\base\Application->__construct()
+#21 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#22 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#23 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#24 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#25 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#26 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#27 /var/www/html/web/index.php(11): require('...')
+#28 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'db.info' doesn't exist
+)
+ {"memory":2488416,"exception":"[object] (yii\\db\\Exception(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist
+The SQL being executed was: SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1 at /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676)
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist at /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320)"} 
+2025-08-14 14:16:19 [web.ERROR] [yii\web\HttpException:503] craft\web\ServiceUnavailableHttpException in /var/www/html/vendor/craftcms/cms/src/web/Application.php:628
+Stack trace:
+#0 /var/www/html/vendor/craftcms/cms/src/web/Application.php(224): craft\web\Application->_processInstallRequest()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): craft\web\Application->handleRequest()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main} {"memory":2937568,"exception":"[object] (craft\\web\\ServiceUnavailableHttpException(code: 0):  at /var/www/html/vendor/craftcms/cms/src/web/Application.php:628)"} 
+2025-08-14 14:16:19 [web.INFO] [application] Request context:
+$_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DEPLOY_NAME' => 'local'
+    'DDEV_WEBSERVER_TYPE' => 'nginx-fpm'
+    'npm_config_cache' => '/mnt/ddev-global-cache/npm'
+    'COREPACK_ENABLE_DOWNLOAD_PROMPT' => '0'
+    'DDEV_GOOS' => 'darwin'
+    'IS_DDEV_PROJECT' => 'true'
+    'PHP_DEFAULT_VERSION' => '8.3'
+    'HOSTNAME' => 'craft-vite-ddev-starter-web'
+    'MAILPIT_SMTP_PORT' => '1025'
+    'MH_SMTP_BIND_ADDR' => '127.0.0.1:1025'
+    'DDEV_PRIMARY_URL_WITHOUT_PORT' => 'https://craft-vite-ddev-starter.ddev.site'
+    'CRAFT_DB_PORT' => '3306'
+    'SSH_AUTH_SOCK' => '/home/.ssh-agent/socket'
+    'DDEV_GID' => '20'
+    'NODE_EXTRA_CA_CERTS' => '/mnt/ddev-global-cache/mkcert/rootCA.pem'
+    'DOCKER_IP' => '127.0.0.1'
+    'PGPASSWORD' => 'db'
+    'CRAFT_WEB_ROOT' => '/var/www/html/web'
+    'DDEV_DOCROOT' => 'web'
+    'PWD' => '/var/www/html'
+    'PLATFORMSH_CLI_UPDATES_CHECK' => '0'
+    'DDEV_APPROOT' => '/var/www/html'
+    'DDEV_FILES_DIR' => ''
+    'START_SCRIPT_TIMEOUT' => '30'
+    'APACHE_SITE_TEMPLATE' => '/etc/apache2/apache-site.conf'
+    'PHP_INI' => '/etc/php/8.3/fpm/php.ini'
+    'DDEV_VERSION' => 'v1.24.7'
+    'PRIMARY_SITE_URL' => 'https://craft-vite-ddev-starter.ddev.site'
+    'TZ' => 'Europe/London'
+    'DDEV_XHPROF_MODE' => 'prepend'
+    'HTTPS_EXPOSE' => '443:80,8026:8025,5173:5173'
+    'COREPACK_HOME' => '/mnt/ddev-global-cache/corepack'
+    'CRAFT_DB_DATABASE' => 'db'
+    'DDEV_PRIMARY_URL' => 'https://craft-vite-ddev-starter.ddev.site'
+    'LINES' => '23'
+    'DDEV_SITENAME' => 'craft-vite-ddev-starter'
+    'HOME' => '/home/gethindavies'
+    'DRUSH_OPTIONS_URI' => 'https://craft-vite-ddev-starter.ddev.site'
+    'LANG' => 'C.UTF-8'
+    'COLUMNS' => '247'
+    'DDEV_MUTAGEN_ENABLED' => 'true'
+    'DDEV_USER' => 'gethindavies'
+    'PGUSER' => 'db'
+    'TERMINUS_CACHE_DIR' => '/mnt/ddev-global-cache/terminus/cache'
+    'DDEV_PRIMARY_URL_PORT' => '443'
+    'DDEV_ROUTER_HTTP_PORT' => '80'
+    'MAILPIT_SMTP_HOSTNAME' => '127.0.0.1'
+    'CRAFT_DB_DRIVER' => 'mysql'
+    'COMPOSER_PROCESS_TIMEOUT' => '2000'
+    'NGINX_SITE_TEMPLATE' => '/etc/nginx/nginx-site.conf'
+    'DDEV_FILES_DIRS' => ''
+    'CRAFT_DB_SERVER' => 'db'
+    'HTTP_EXPOSE' => '80:80,8025:8025,5172:5173'
+    'NVM_DIR' => '/home/gethindavies/.nvm'
+    'DDEV_PHP_VERSION' => '8.3'
+    'DDEV_TLD' => 'ddev.site'
+    'DDEV_HOSTNAME' => 'craft-vite-ddev-starter.ddev.site'
+    'DDEV_PROJECT' => 'craft-vite-ddev-starter'
+    'DDEV_GOARCH' => 'arm64'
+    'VIRTUAL_HOST' => 'craft-vite-ddev-starter.ddev.site'
+    'TERM' => 'xterm'
+    'USER' => 'gethindavies'
+    'MYSQL_HISTFILE' => '/mnt/ddev-global-cache/mysqlhistory/craft-vite-ddev-starter-web/mysql_history'
+    'DDEV_WEB_ENTRYPOINT' => '/mnt/ddev_config/web-entrypoint.d'
+    'DDEV_UID' => '501'
+    'CAROOT' => '/mnt/ddev-global-cache/mkcert'
+    'SHLVL' => '1'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'BASH_ENV' => '/etc/bash.nointeractive.bashrc'
+    'DDEV_DATABASE' => 'mysql:8.0'
+    'PGDATABASE' => 'db'
+    'CRAFT_DB_USER' => 'db'
+    'DDEV_SCHEME' => 'https'
+    'XHPROF_OUTPUT_DIR' => '/tmp/xhprof'
+    'COMPOSER_CACHE_DIR' => '/mnt/ddev-global-cache/composer'
+    'DDEV_XDEBUG_ENABLED' => 'false'
+    'DDEV_DATABASE_FAMILY' => 'mysql'
+    'PGHOST' => 'db'
+    'DDEV_COMPOSER_ROOT' => '/var/www/html'
+    'CRAFT_DB_PASSWORD' => '••'
+    'DOCROOT' => 'web'
+    'TERMINUS_HIDE_UPDATE_MESSAGE' => '1'
+    'PATH' => '/home/gethindavies/bin:/var/www/html/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/html/bin:/mnt/ddev-global-cache/global-commands/web'
+    'HOST_DOCKER_INTERNAL_IP' => ''
+    'DDEV_PROJECT_TYPE' => 'craftcms'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'DDEV_ROUTER_HTTPS_PORT' => '443'
+    'EXECIGNORE' => '/var/www/html/vendor/bin/composer'
+    'SUPERVISOR_ENABLED' => '1'
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock'
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm'
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm'
+    'HTTP_X_REAL_IP' => '172.18.0.1'
+    'HTTP_X_FORWARDED_SERVER' => 'b4fdb0e5fab3'
+    'HTTP_X_FORWARDED_PROTO' => 'https'
+    'HTTP_X_FORWARDED_PORT' => '443'
+    'HTTP_X_FORWARDED_HOST' => 'craft-vite-ddev-starter.ddev.site'
+    'HTTP_X_FORWARDED_FOR' => '172.18.0.1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"macOS\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"'
+    'HTTP_PRIORITY' => 'u=0, i'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+    'HTTP_HOST' => 'craft-vite-ddev-starter.ddev.site'
+    'HTTPS' => 'on'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'craft-vite-ddev-starter.ddev.site'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.18.0.4'
+    'REMOTE_PORT' => '48428'
+    'REMOTE_ADDR' => '172.18.0.5'
+    'SERVER_SOFTWARE' => 'nginx/1.28.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1755180979.3304
+    'REQUEST_TIME' => 1755180979
+    'CRAFT_ENVIRONMENT' => 'dev'
+    'CRAFT_SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'CRAFT_DEV_MODE' => 'true'
+    'CRAFT_ALLOW_ADMIN_CHANGES' => 'true'
+    'CRAFT_DISALLOW_ROBOTS' => 'true'
+] {"environment":"dev"} 
+2025-08-14 14:16:19 [web.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":941912} 
+2025-08-14 14:16:19 [web.ERROR] [craft\base\ApplicationTrait::getIsInstalled] There was a problem fetching the info row: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist
+The SQL being executed was: SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1 {"memory":1027496} 
+2025-08-14 14:16:19 [web.ERROR] [yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist in /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Command.php(431): yii\db\Command->queryInternal()
+#3 /var/www/html/vendor/yiisoft/yii2/db/Query.php(287): yii\db\Command->queryOne()
+#4 /var/www/html/vendor/craftcms/cms/src/db/Query.php(320): yii\db\Query->one()
+#5 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(843): craft\db\Query->one()
+#6 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(443): craft\web\Application->getInfo()
+#7 /var/www/html/vendor/craftcms/cms/src/helpers/App.php(1124): craft\web\Application->getIsInstalled()
+#8 /var/www/html/vendor/craftcms/cms/src/config/app.php(241): craft\helpers\App::projectConfigConfig()
+#9 [internal function]: {closure}()
+#10 /var/www/html/vendor/yiisoft/yii2/di/Container.php(633): call_user_func_array()
+#11 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke()
+#12 /var/www/html/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject()
+#13 /var/www/html/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get()
+#14 /var/www/html/vendor/craftcms/cms/src/web/Application.php(379): yii\base\Module->get()
+#15 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1363): craft\web\Application->get()
+#16 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1581): craft\web\Application->getProjectConfig()
+#17 /var/www/html/vendor/craftcms/cms/src/web/Application.php(100): craft\web\Application->_preInit()
+#18 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#19 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#20 [internal function]: yii\base\Application->__construct()
+#21 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#22 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#23 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#24 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#25 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#26 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#27 /var/www/html/web/index.php(11): require('...')
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist
+The SQL being executed was: SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1 in /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException()
+#1 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Command.php(431): yii\db\Command->queryInternal()
+#3 /var/www/html/vendor/yiisoft/yii2/db/Query.php(287): yii\db\Command->queryOne()
+#4 /var/www/html/vendor/craftcms/cms/src/db/Query.php(320): yii\db\Query->one()
+#5 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(843): craft\db\Query->one()
+#6 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(443): craft\web\Application->getInfo()
+#7 /var/www/html/vendor/craftcms/cms/src/helpers/App.php(1124): craft\web\Application->getIsInstalled()
+#8 /var/www/html/vendor/craftcms/cms/src/config/app.php(241): craft\helpers\App::projectConfigConfig()
+#9 [internal function]: {closure}()
+#10 /var/www/html/vendor/yiisoft/yii2/di/Container.php(633): call_user_func_array()
+#11 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke()
+#12 /var/www/html/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject()
+#13 /var/www/html/vendor/yiisoft/yii2/base/Module.php(766): yii\di\ServiceLocator->get()
+#14 /var/www/html/vendor/craftcms/cms/src/web/Application.php(379): yii\base\Module->get()
+#15 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1363): craft\web\Application->get()
+#16 /var/www/html/vendor/craftcms/cms/src/base/ApplicationTrait.php(1581): craft\web\Application->getProjectConfig()
+#17 /var/www/html/vendor/craftcms/cms/src/web/Application.php(100): craft\web\Application->_preInit()
+#18 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#19 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#20 [internal function]: yii\base\Application->__construct()
+#21 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#22 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#23 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#24 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#25 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#26 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#27 /var/www/html/web/index.php(11): require('...')
+#28 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'db.info' doesn't exist
+)
+ {"memory":1027712,"exception":"[object] (yii\\db\\Exception(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist
+The SQL being executed was: SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1 at /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676)
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.info' doesn't exist at /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320)"} 
+2025-08-14 14:16:19 [web.ERROR] [yii\web\HttpException:503] craft\web\ServiceUnavailableHttpException in /var/www/html/vendor/craftcms/cms/src/web/Application.php:628
+Stack trace:
+#0 /var/www/html/vendor/craftcms/cms/src/web/Application.php(224): craft\web\Application->_processInstallRequest()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): craft\web\Application->handleRequest()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main} {"memory":945280,"exception":"[object] (craft\\web\\ServiceUnavailableHttpException(code: 0):  at /var/www/html/vendor/craftcms/cms/src/web/Application.php:628)"} 
+2025-08-14 14:16:19 [web.INFO] [application] Request context:
+$_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DEPLOY_NAME' => 'local'
+    'DDEV_WEBSERVER_TYPE' => 'nginx-fpm'
+    'npm_config_cache' => '/mnt/ddev-global-cache/npm'
+    'COREPACK_ENABLE_DOWNLOAD_PROMPT' => '0'
+    'DDEV_GOOS' => 'darwin'
+    'IS_DDEV_PROJECT' => 'true'
+    'PHP_DEFAULT_VERSION' => '8.3'
+    'HOSTNAME' => 'craft-vite-ddev-starter-web'
+    'MAILPIT_SMTP_PORT' => '1025'
+    'MH_SMTP_BIND_ADDR' => '127.0.0.1:1025'
+    'DDEV_PRIMARY_URL_WITHOUT_PORT' => 'https://craft-vite-ddev-starter.ddev.site'
+    'CRAFT_DB_PORT' => '3306'
+    'SSH_AUTH_SOCK' => '/home/.ssh-agent/socket'
+    'DDEV_GID' => '20'
+    'NODE_EXTRA_CA_CERTS' => '/mnt/ddev-global-cache/mkcert/rootCA.pem'
+    'DOCKER_IP' => '127.0.0.1'
+    'PGPASSWORD' => 'db'
+    'CRAFT_WEB_ROOT' => '/var/www/html/web'
+    'DDEV_DOCROOT' => 'web'
+    'PWD' => '/var/www/html'
+    'PLATFORMSH_CLI_UPDATES_CHECK' => '0'
+    'DDEV_APPROOT' => '/var/www/html'
+    'DDEV_FILES_DIR' => ''
+    'START_SCRIPT_TIMEOUT' => '30'
+    'APACHE_SITE_TEMPLATE' => '/etc/apache2/apache-site.conf'
+    'PHP_INI' => '/etc/php/8.3/fpm/php.ini'
+    'DDEV_VERSION' => 'v1.24.7'
+    'PRIMARY_SITE_URL' => 'https://craft-vite-ddev-starter.ddev.site'
+    'TZ' => 'Europe/London'
+    'DDEV_XHPROF_MODE' => 'prepend'
+    'HTTPS_EXPOSE' => '443:80,8026:8025,5173:5173'
+    'COREPACK_HOME' => '/mnt/ddev-global-cache/corepack'
+    'CRAFT_DB_DATABASE' => 'db'
+    'DDEV_PRIMARY_URL' => 'https://craft-vite-ddev-starter.ddev.site'
+    'LINES' => '23'
+    'DDEV_SITENAME' => 'craft-vite-ddev-starter'
+    'HOME' => '/home/gethindavies'
+    'DRUSH_OPTIONS_URI' => 'https://craft-vite-ddev-starter.ddev.site'
+    'LANG' => 'C.UTF-8'
+    'COLUMNS' => '247'
+    'DDEV_MUTAGEN_ENABLED' => 'true'
+    'DDEV_USER' => 'gethindavies'
+    'PGUSER' => 'db'
+    'TERMINUS_CACHE_DIR' => '/mnt/ddev-global-cache/terminus/cache'
+    'DDEV_PRIMARY_URL_PORT' => '443'
+    'DDEV_ROUTER_HTTP_PORT' => '80'
+    'MAILPIT_SMTP_HOSTNAME' => '127.0.0.1'
+    'CRAFT_DB_DRIVER' => 'mysql'
+    'COMPOSER_PROCESS_TIMEOUT' => '2000'
+    'NGINX_SITE_TEMPLATE' => '/etc/nginx/nginx-site.conf'
+    'DDEV_FILES_DIRS' => ''
+    'CRAFT_DB_SERVER' => 'db'
+    'HTTP_EXPOSE' => '80:80,8025:8025,5172:5173'
+    'NVM_DIR' => '/home/gethindavies/.nvm'
+    'DDEV_PHP_VERSION' => '8.3'
+    'DDEV_TLD' => 'ddev.site'
+    'DDEV_HOSTNAME' => 'craft-vite-ddev-starter.ddev.site'
+    'DDEV_PROJECT' => 'craft-vite-ddev-starter'
+    'DDEV_GOARCH' => 'arm64'
+    'VIRTUAL_HOST' => 'craft-vite-ddev-starter.ddev.site'
+    'TERM' => 'xterm'
+    'USER' => 'gethindavies'
+    'MYSQL_HISTFILE' => '/mnt/ddev-global-cache/mysqlhistory/craft-vite-ddev-starter-web/mysql_history'
+    'DDEV_WEB_ENTRYPOINT' => '/mnt/ddev_config/web-entrypoint.d'
+    'DDEV_UID' => '501'
+    'CAROOT' => '/mnt/ddev-global-cache/mkcert'
+    'SHLVL' => '1'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'BASH_ENV' => '/etc/bash.nointeractive.bashrc'
+    'DDEV_DATABASE' => 'mysql:8.0'
+    'PGDATABASE' => 'db'
+    'CRAFT_DB_USER' => 'db'
+    'DDEV_SCHEME' => 'https'
+    'XHPROF_OUTPUT_DIR' => '/tmp/xhprof'
+    'COMPOSER_CACHE_DIR' => '/mnt/ddev-global-cache/composer'
+    'DDEV_XDEBUG_ENABLED' => 'false'
+    'DDEV_DATABASE_FAMILY' => 'mysql'
+    'PGHOST' => 'db'
+    'DDEV_COMPOSER_ROOT' => '/var/www/html'
+    'CRAFT_DB_PASSWORD' => '••'
+    'DOCROOT' => 'web'
+    'TERMINUS_HIDE_UPDATE_MESSAGE' => '1'
+    'PATH' => '/home/gethindavies/bin:/var/www/html/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/html/bin:/mnt/ddev-global-cache/global-commands/web'
+    'HOST_DOCKER_INTERNAL_IP' => ''
+    'DDEV_PROJECT_TYPE' => 'craftcms'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'DDEV_ROUTER_HTTPS_PORT' => '443'
+    'EXECIGNORE' => '/var/www/html/vendor/bin/composer'
+    'SUPERVISOR_ENABLED' => '1'
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock'
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm'
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm'
+    'HTTP_X_REAL_IP' => '172.18.0.1'
+    'HTTP_X_FORWARDED_SERVER' => 'b4fdb0e5fab3'
+    'HTTP_X_FORWARDED_PROTO' => 'https'
+    'HTTP_X_FORWARDED_PORT' => '443'
+    'HTTP_X_FORWARDED_HOST' => 'craft-vite-ddev-starter.ddev.site'
+    'HTTP_X_FORWARDED_FOR' => '172.18.0.1'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"macOS\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"'
+    'HTTP_REFERER' => 'https://craft-vite-ddev-starter.ddev.site/'
+    'HTTP_PRIORITY' => 'u=1, i'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+    'HTTP_HOST' => 'craft-vite-ddev-starter.ddev.site'
+    'HTTPS' => 'on'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'craft-vite-ddev-starter.ddev.site'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '172.18.0.4'
+    'REMOTE_PORT' => '48428'
+    'REMOTE_ADDR' => '172.18.0.5'
+    'SERVER_SOFTWARE' => 'nginx/1.28.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/html/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/favicon.ico'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1755180979.5054
+    'REQUEST_TIME' => 1755180979
+    'CRAFT_ENVIRONMENT' => 'dev'
+    'CRAFT_SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'CRAFT_DEV_MODE' => 'true'
+    'CRAFT_ALLOW_ADMIN_CHANGES' => 'true'
+    'CRAFT_DISALLOW_ROBOTS' => 'true'
+] {"environment":"dev"} 

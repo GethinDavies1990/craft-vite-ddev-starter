@@ -34,14 +34,13 @@ EOF
   fi
 fi
 
-# --- DDEV project name in .ddev/config.yaml ---
+# --- Update DDEV project name in config.yaml ---
 if [ -f ".ddev/config.yaml" ]; then
-  # replace the name: line with current folder
   sed -i '' "s/^name: .*/name: ${PROJECT_NAME}/" .ddev/config.yaml 2>/dev/null || \
   sed -i "s/^name: .*/name: ${PROJECT_NAME}/" .ddev/config.yaml 2>/dev/null || true
 fi
 
-# --- make sure ports are mapped ---
+# --- Make sure Vite ports are mapped ---
 if ! grep -q "web_extra_exposed_ports" .ddev/config.yaml; then
   cat >> .ddev/config.yaml <<'YAML'
 
@@ -53,39 +52,45 @@ web_extra_exposed_ports:
 YAML
 fi
 
-# --- (optional) turn off mutagen for stability ---
+# --- Disable Mutagen for stability (optional) ---
 ddev config --mutagen-enabled=false >/dev/null 2>&1 || true
 
-# --- start DDEV cleanly ---
+# --- Start DDEV cleanly ---
 ddev stop --unlist "${PROJECT_NAME}" >/dev/null 2>&1 || true
 ddev start
 
-# --- kill any stale vite/node inside the container ---
+# --- Kill any stale vite/node processes inside container ---
 ddev exec pkill -f vite >/dev/null 2>&1 || true
 ddev exec pkill -9 node >/dev/null 2>&1 || true
 
-# --- PHP deps ---
+# --- Install PHP deps ---
 ddev composer install
 
-# --- Node deps ---
+# --- Install Node deps ---
 ddev npm install
 
-# --- Ensure Craft Vite plugin installed & enabled ---
+# --- Ensure Craft Vite plugin is installed ---
 if ! ddev composer show nystudio107/craft-vite >/dev/null 2>&1; then
   ddev composer require nystudio107/craft-vite
 fi
 ddev craft plugin/install vite >/dev/null 2>&1 || true
 
-# --- Security key if blank ---
+# --- Ensure Security Key exists ---
 if ! grep -q "^CRAFT_SECURITY_KEY=" .env || [ -z "$(grep '^CRAFT_SECURITY_KEY=' .env | cut -d= -f2)" ]; then
   ddev craft setup/security-key
 fi
 
-# --- Install or apply project config ---
-# If it’s a brand-new DB, "install" will run; otherwise apply project config/migrations
+# --- Install or apply migrations/config ---
 if ddev craft install/can-install >/dev/null 2>&1; then
-  ddev craft install
+  echo "💾 Fresh DB detected — installing Craft..."
+  ddev craft install \
+    --site-name="${PROJECT_NAME}" \
+    --site-url="${PRIMARY_URL}" \
+    --username=admin \
+    --email=admin@example.com \
+    --password=admin1234
 else
+  echo "🔄 Applying pending migrations & project config..."
   ddev craft migrate/all || true
   ddev craft project-config/apply --force || true
 fi
@@ -97,5 +102,5 @@ echo "🔗 Vite:   ${PRIMARY_URL}:5173"
 echo "👉 Starting Vite dev server..."
 echo ""
 
-# --- start vite dev server (foreground) ---
+# --- Start Vite dev server in foreground ---
 ddev npm run dev
