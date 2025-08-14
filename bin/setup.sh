@@ -11,7 +11,6 @@ if [ ! -f ".env" ]; then
   if [ -f ".env.example" ]; then
     cp .env.example .env
     echo "PRIMARY_SITE_URL=${PRIMARY_URL}" > .env.tmp
-    # keep any existing keys from .env.example (except PRIMARY_SITE_URL which we set)
     grep -v '^PRIMARY_SITE_URL=' .env >> .env.tmp || true
     mv .env.tmp .env
     echo "✅ Created .env (PRIMARY_SITE_URL=${PRIMARY_URL})"
@@ -40,7 +39,7 @@ if [ -f ".ddev/config.yaml" ]; then
   sed -i "s/^name: .*/name: ${PROJECT_NAME}/" .ddev/config.yaml 2>/dev/null || true
 fi
 
-# --- Make sure Vite ports are mapped ---
+# --- Ensure Vite ports are mapped ---
 if ! grep -q "web_extra_exposed_ports" .ddev/config.yaml; then
   cat >> .ddev/config.yaml <<'YAML'
 
@@ -52,7 +51,7 @@ web_extra_exposed_ports:
 YAML
 fi
 
-# --- Disable Mutagen for stability (optional) ---
+# --- (optional) disable Mutagen for stability ---
 ddev config --mutagen-enabled=false >/dev/null 2>&1 || true
 
 # --- Start DDEV cleanly ---
@@ -63,13 +62,11 @@ ddev start
 ddev exec pkill -f vite >/dev/null 2>&1 || true
 ddev exec pkill -9 node >/dev/null 2>&1 || true
 
-# --- Install PHP deps ---
+# --- Install PHP & Node deps ---
 ddev composer install
-
-# --- Install Node deps ---
 ddev npm install
 
-# --- Ensure Craft Vite plugin is installed ---
+# --- Ensure Craft Vite plugin is installed & enabled ---
 if ! ddev composer show nystudio107/craft-vite >/dev/null 2>&1; then
   ddev composer require nystudio107/craft-vite
 fi
@@ -80,8 +77,9 @@ if ! grep -q "^CRAFT_SECURITY_KEY=" .env || [ -z "$(grep '^CRAFT_SECURITY_KEY=' 
   ddev craft setup/security-key
 fi
 
-# --- Install or apply migrations/config ---
-if ddev craft install/can-install >/dev/null 2>&1; then
+# --- DB check: if 'info' table is missing -> fresh install ---
+HAS_INFO_TABLE=$(ddev exec bash -lc 'mysql -udb -pdb -N -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=\"db\" AND table_name=\"info\";"' 2>/dev/null | tr -d '\r')
+if [ "$HAS_INFO_TABLE" != "1" ]; then
   echo "💾 Fresh DB detected — installing Craft..."
   ddev craft install \
     --site-name="${PROJECT_NAME}" \
@@ -90,7 +88,7 @@ if ddev craft install/can-install >/dev/null 2>&1; then
     --email=admin@example.com \
     --password=admin1234
 else
-  echo "🔄 Applying pending migrations & project config..."
+  echo "🔄 Existing DB — applying migrations & project config..."
   ddev craft migrate/all || true
   ddev craft project-config/apply --force || true
 fi

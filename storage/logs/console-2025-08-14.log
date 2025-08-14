@@ -89,3 +89,94 @@ WHERE `track`='craft'
 ORDER BY `name` DESC at /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676)
 [previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.migrations' doesn't exist at /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320)"} 
 2025-08-14 14:16:09 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113128} 
+2025-08-14 14:30:01 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113056} 
+2025-08-14 14:30:01 [console.INFO] [nystudio107\vite\Vite::init] Vite plugin loaded {"memory":3311464} 
+2025-08-14 14:30:02 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113032} 
+2025-08-14 14:30:03 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113096} 
+2025-08-14 14:30:03 [console.ERROR] [yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: install/can-install in /var/www/html/vendor/yiisoft/yii2/base/Controller.php:149
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#1 /var/www/html/vendor/craftcms/cms/src/console/ControllerTrait.php(88): yii\console\Controller->runAction()
+#2 /var/www/html/vendor/craftcms/cms/src/console/Controller.php(216): craft\console\Controller->traitRunAction()
+#3 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): craft\console\Controller->runAction()
+#4 /var/www/html/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#5 /var/www/html/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction()
+#6 /var/www/html/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction()
+#7 /var/www/html/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest()
+#8 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): craft\console\Application->handleRequest()
+#9 /var/www/html/craft(13): yii\base\Application->run()
+#10 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "install/can-install". in /var/www/html/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /var/www/html/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction()
+#1 /var/www/html/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction()
+#2 /var/www/html/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest()
+#3 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): craft\console\Application->handleRequest()
+#4 /var/www/html/craft(13): yii\base\Application->run()
+#5 {main} {"memory":2821032,"exception":"[object] (yii\\console\\UnknownCommandException(code: 0): Unknown command \"install/can-install\". at /var/www/html/vendor/yiisoft/yii2/console/Application.php:183)
+[previous exception] [object] (yii\\base\\InvalidRouteException(code: 0): Unable to resolve the request: install/can-install at /var/www/html/vendor/yiisoft/yii2/base/Controller.php:149)"} 
+2025-08-14 14:30:04 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113088} 
+2025-08-14 14:30:04 [console.ERROR] [yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.migrations' doesn't exist in /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1320): PDOStatement->execute()
+#1 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal()
+#3 /var/www/html/vendor/craftcms/cms/src/db/Query.php(267): yii\db\Command->queryAll()
+#4 /var/www/html/vendor/craftcms/cms/src/db/MigrationManager.php(333): craft\db\Query->pairs()
+#5 /var/www/html/vendor/craftcms/cms/src/db/MigrationManager.php(406): craft\db\MigrationManager->getMigrationHistory()
+#6 /var/www/html/vendor/craftcms/cms/src/console/controllers/MigrateController.php(308): craft\db\MigrationManager->getNewMigrations()
+#7 [internal function]: craft\console\controllers\MigrateController->actionAll()
+#8 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#10 /var/www/html/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#11 /var/www/html/vendor/craftcms/cms/src/console/controllers/MigrateController.php(192): yii\console\Controller->runAction()
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): craft\console\controllers\MigrateController->runAction()
+#13 /var/www/html/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#14 /var/www/html/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction()
+#15 /var/www/html/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction()
+#16 /var/www/html/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest()
+#17 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): craft\console\Application->handleRequest()
+#18 /var/www/html/craft(13): yii\base\Application->run()
+#19 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.migrations' doesn't exist
+The SQL being executed was: SELECT `name`, `applyTime`
+FROM `migrations`
+WHERE `track`='craft'
+ORDER BY `name` DESC in /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1325): yii\db\Schema->convertException()
+#1 /var/www/html/vendor/yiisoft/yii2/db/Command.php(1186): yii\db\Command->internalExecute()
+#2 /var/www/html/vendor/yiisoft/yii2/db/Command.php(417): yii\db\Command->queryInternal()
+#3 /var/www/html/vendor/craftcms/cms/src/db/Query.php(267): yii\db\Command->queryAll()
+#4 /var/www/html/vendor/craftcms/cms/src/db/MigrationManager.php(333): craft\db\Query->pairs()
+#5 /var/www/html/vendor/craftcms/cms/src/db/MigrationManager.php(406): craft\db\MigrationManager->getMigrationHistory()
+#6 /var/www/html/vendor/craftcms/cms/src/console/controllers/MigrateController.php(308): craft\db\MigrationManager->getNewMigrations()
+#7 [internal function]: craft\console\controllers\MigrateController->actionAll()
+#8 /var/www/html/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#10 /var/www/html/vendor/yiisoft/yii2/console/Controller.php(180): yii\base\Controller->runAction()
+#11 /var/www/html/vendor/craftcms/cms/src/console/controllers/MigrateController.php(192): yii\console\Controller->runAction()
+#12 /var/www/html/vendor/yiisoft/yii2/base/Module.php(552): craft\console\controllers\MigrateController->runAction()
+#13 /var/www/html/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#14 /var/www/html/vendor/craftcms/cms/src/console/Application.php(91): yii\console\Application->runAction()
+#15 /var/www/html/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction()
+#16 /var/www/html/vendor/craftcms/cms/src/console/Application.php(122): yii\console\Application->handleRequest()
+#17 /var/www/html/vendor/yiisoft/yii2/base/Application.php(384): craft\console\Application->handleRequest()
+#18 /var/www/html/craft(13): yii\base\Application->run()
+#19 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'db.migrations' doesn't exist
+)
+ {"memory":2922280,"exception":"[object] (yii\\db\\Exception(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.migrations' doesn't exist
+The SQL being executed was: SELECT `name`, `applyTime`
+FROM `migrations`
+WHERE `track`='craft'
+ORDER BY `name` DESC at /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676)
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.migrations' doesn't exist at /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320)"} 
+2025-08-14 14:30:05 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113128} 
