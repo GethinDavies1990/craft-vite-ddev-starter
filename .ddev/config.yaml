@@ -1,4 +1,4 @@
-name: futur-craft
+name: craft-vite-ddev-starter
 type: craftcms
 docroot: web
 php_version: "8.3"
