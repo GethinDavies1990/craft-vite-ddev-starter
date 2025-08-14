@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'Futur Media'
+primary: true
+siteGroup: a0333b5b-25b4-44fc-9409-8164a8cf4f9c # Futur Media
+sortOrder: 1

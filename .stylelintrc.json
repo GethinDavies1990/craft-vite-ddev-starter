@@ -1,0 +1,52 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "rules": {
+        "import-notation": "string",
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": ["tailwind", "source"]
+            }
+        ]
+    },
+    "at-rule-no-deprecated": [
+        true,
+        {
+            "ignoreAtRules": ["apply"]
+        }
+    ],
+    "decalration-property-value-no-unknown": [
+        true,
+        {
+            "ignoreProperties": {
+                "/.+/": "/^.*?theme/"
+            }
+        }
+    ],
+    "function-no-unknown": [
+        true,
+        {
+            "ignoreFucntions": ["screen", "theme"]
+        }
+    ],
+    "at-rule-no-unknown": [
+        true,
+        {
+            "ignoreAtRules": [
+                "theme",
+                "source",
+                "utility",
+                "variant",
+                "custom-variant",
+                "plugin",
+                "tailwind",
+                "apply",
+                "layer",
+                "config",
+                "variants",
+                "responsive",
+                "screen"
+            ]
+        }
+    ]
+}
