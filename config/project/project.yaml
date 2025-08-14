@@ -1,11 +1,11 @@
-dateModified: 1755169696
+dateModified: 1755182104
 email:
   fromEmail: hello@futurmedia.co.uk
   fromName: 'Futur Media'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    715bd30f-0e0c-467a-9556-20312d9ffa9a: 'Futur Media' # Futur Media
+    715bd30f-0e0c-467a-9556-20312d9ffa9a: craft-vite-ddev-starter # craft-vite-ddev-starter
     a0333b5b-25b4-44fc-9409-8164a8cf4f9c: 'Futur Media' # Futur Media
 plugins:
   vite:

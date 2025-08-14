@@ -180,3 +180,14 @@ WHERE `track`='craft'
 ORDER BY `name` DESC at /var/www/html/vendor/yiisoft/yii2/db/Schema.php:676)
 [previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db.migrations' doesn't exist at /var/www/html/vendor/yiisoft/yii2/db/Command.php:1320)"} 
 2025-08-14 14:30:05 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113128} 
+2025-08-14 14:34:49 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113056} 
+2025-08-14 14:34:49 [console.INFO] [nystudio107\vite\Vite::init] Vite plugin loaded {"memory":3311464} 
+2025-08-14 14:34:50 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113032} 
+2025-08-14 14:35:04 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":2113376} 
+2025-08-14 14:35:04 [console.INFO] [craft\db\MigrationManager::migrateUp] Applying Install {"memory":3890600} 
+2025-08-14 14:35:04 [console.INFO] [nystudio107\vite\Vite::init] Vite plugin loaded {"memory":5239512} 
+2025-08-14 14:35:04 [console.INFO] [craft\services\ProjectConfig::_applyChanges] Looking for pending changes {"memory":4848248} 
+2025-08-14 14:35:04 [console.INFO] [craft\services\ProjectConfig::_applyChanges] Parsing 8 new configuration items {"memory":4849352} 
+2025-08-14 14:35:04 [console.INFO] [craft\services\ProjectConfig::_applyChanges] Finalizing configuration parsing {"memory":4887496} 
+2025-08-14 14:35:04 [console.INFO] [yii\db\Connection::open] Opening DB connection: mysql:host=db;dbname=db;port=3306 {"memory":5464600} 
+2025-08-14 14:35:04 [console.INFO] [craft\db\MigrationManager::migrateUp] Applied Install (time: 3.215s). {"memory":5707592} 

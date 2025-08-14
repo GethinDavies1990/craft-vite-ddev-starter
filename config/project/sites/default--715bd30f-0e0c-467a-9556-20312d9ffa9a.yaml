@@ -1,8 +1,9 @@
 baseUrl: $PRIMARY_SITE_URL
+enabled: true
 handle: default
 hasUrls: true
 language: en
-name: 'Futur Media'
+name: craft-vite-ddev-starter
 primary: true
 siteGroup: a0333b5b-25b4-44fc-9409-8164a8cf4f9c # Futur Media
 sortOrder: 1
