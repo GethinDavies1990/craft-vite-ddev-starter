@@ -1,4 +1,4 @@
-name: craft-master
+name: futur-craft
 type: craftcms
 docroot: web
 php_version: "8.3"

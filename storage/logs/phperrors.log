@@ -1,0 +1,666 @@
+[14-Aug-2025 06:39:28 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:39:28 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:39:31 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:39:31 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:39:50 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:39:50 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:45:01 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:45:01 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:45:18 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:45:18 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:45:19 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:45:19 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:46:16 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:46:16 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:47:21 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:47:21 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:49:04 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}
+[14-Aug-2025 06:49:04 America/Los_Angeles] An Error occurred while handling another error:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(306): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(220): craft\web\ErrorHandler->showExceptionDetails()
+#8 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(152): craft\web\ErrorHandler->renderException()
+#9 /var/www/html/vendor/craftcms/cms/src/web/ErrorHandler.php(102): yii\base\ErrorHandler->handleException()
+#10 [internal function]: craft\web\ErrorHandler->handleException()
+#11 {main}
+Previous exception:
+yii\base\InvalidConfigException: craft\web\Request::cookieValidationKey must be configured with a secret key. in /var/www/html/vendor/yiisoft/yii2/web/Request.php:1760
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Request.php(1742): yii\web\Request->loadCookies()
+#1 /var/www/html/vendor/yiisoft/yii2/web/User.php(594): yii\web\Request->getCookies()
+#2 /var/www/html/vendor/yiisoft/yii2/web/User.php(321): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /var/www/html/vendor/yiisoft/yii2/web/User.php(728): yii\web\User->loginByCookie()
+#4 /var/www/html/vendor/craftcms/cms/src/web/User.php(548): yii\web\User->renewAuthStatus()
+#5 /var/www/html/vendor/yiisoft/yii2/web/User.php(199): craft\web\User->renewAuthStatus()
+#6 /var/www/html/vendor/craftcms/cms/src/web/Application.php(454): yii\web\User->getIdentity()
+#7 /var/www/html/vendor/craftcms/cms/src/web/Application.php(114): craft\web\Application->debugBootstrap()
+#8 /var/www/html/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\web\Application->init()
+#9 /var/www/html/vendor/yiisoft/yii2/base/Application.php(204): yii\base\BaseObject->__construct()
+#10 [internal function]: yii\base\Application->__construct()
+#11 /var/www/html/vendor/yiisoft/yii2/di/Container.php(419): ReflectionClass->newInstanceArgs()
+#12 /var/www/html/vendor/yiisoft/yii2/di/Container.php(170): yii\di\Container->build()
+#13 /var/www/html/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#14 /var/www/html/vendor/craftcms/cms/src/Craft.php(70): yii\BaseYii::createObject()
+#15 /var/www/html/vendor/craftcms/cms/bootstrap/bootstrap.php(306): Craft::createObject()
+#16 /var/www/html/vendor/craftcms/cms/bootstrap/web.php(35): require('...')
+#17 /var/www/html/web/index.php(11): require('...')
+#18 {main}

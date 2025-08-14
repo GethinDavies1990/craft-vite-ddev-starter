@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => ({
     plugins: [
         checker({
             stylelint: {
-                lintCommand: 'stylelint "src/**/*.css',
+                lintCommand: 'stylelint "src/**/*.css"',
             },
             eslint: {
                 lintCommand: 'eslint "src/**/*.js"',
@@ -40,8 +40,12 @@ export default defineConfig(({ command }) => ({
         port: 5173, // <-- must match container_port
         strictPort: true,
         cors: true, // <-- unblock CORS
-        origin: "https://craft-master.ddev.site:5173", // <-- use DDEV HTTPS port
-        hmr: { host: "craft-master.ddev.site", protocol: "wss", port: 5173 },
+        origin: "//https://futur-craft.ddev.site/:5173", // <-- use DDEV HTTPS port
+        hmr: {
+            host: "https://futur-craft.ddev.site/",
+            protocol: "wss",
+            port: 5173,
+        },
         watch: { ignored: ["./storage/**", "./vendor/**", "./web/**"] },
     },
 }));
